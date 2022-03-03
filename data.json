@@ -1,0 +1,26 @@
+{
+  "looker": {
+    "title": "The Looker",
+    "description": ""
+  },
+  "charmer": {
+    "title": "The Charmer",
+    "description": ""
+  },
+  "senser": {
+    "title": "The Senser",
+    "description": ""
+  },
+  "inspector": {
+    "title": "The Inspector",
+    "description": ""
+  },
+  "explorer": {
+    "title": "The Explorer",
+    "description": ""
+  },
+  "thinker": {
+    "title": "The Thinker",
+    "description": ""
+  }
+}
