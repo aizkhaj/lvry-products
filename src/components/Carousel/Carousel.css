@@ -40,7 +40,7 @@
   background: none;
 }
 
-@media all and (max-width: 380px) {
+@media all and (max-width: 420px) {
   .img-container {
     margin-bottom: 20px;
   }

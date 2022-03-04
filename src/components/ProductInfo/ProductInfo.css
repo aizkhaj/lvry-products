@@ -62,7 +62,7 @@
   margin-left: 0;
 }
 
-@media all and (max-width: 380px) {
+@media all and (max-width: 420px) {
   .product-container {
     max-width: 350px;
   }
