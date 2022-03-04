@@ -1,0 +1,43 @@
+.form-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.input {
+  flex-direction: column;
+  margin-top: 5px;
+  margin-right: 9px;
+}
+
+.input > p {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.green-btn {
+  border-style: none;
+  background-color: limegreen;
+  color: white;
+  height: 22px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+@media all and (max-width: 380px) {
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-input {
+    margin-left: 10px;
+  }
+
+  .green-btn {
+    display: flex;
+    margin-top: 10px;
+  }
+}
