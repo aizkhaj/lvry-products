@@ -1,9 +1,12 @@
 // import { useState, useEffect } from 'react';
 import "./Nav.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
   return (
     <div className="navbar">
+      <FontAwesomeIcon icon={faBars} />
       <ul className="list">
         <li className="items">Shop</li>
         <li className="items">About Us</li>

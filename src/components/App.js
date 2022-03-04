@@ -9,12 +9,23 @@ import data from '../data.json';
 
 
 function App() {
-  const [selectedData, setSelectedData] = useState(data[kitType.LOOKER])
-  const [title, setTitle] = useState(selectedData.title);
-  const [description, setDescription] = useState(selectedData.description);
-  const [suitableFor, setSuitableFor] = useState(selectedData.suitableFor);
-  const [subscriptionName, setSubscriptionName] = useState(selectedData.subscriptionName);
-  const [images, setImages] = useState(selectedData.images);
+  const [title, setTitle] = useState(data[kitType.LOOKER].title);
+  const [description, setDescription] = useState(data[kitType.LOOKER].description);
+  const [suitableFor, setSuitableFor] = useState(data[kitType.LOOKER].suitableFor);
+  const [subscriptionName, setSubscriptionName] = useState(data[kitType.LOOKER].subscriptionName);
+  const [images, setImages] = useState(data[kitType.LOOKER].images);
+  const [birthDate, setBirthDate] = useState(new Date());
+
+  useEffect(() => {
+    const kit = determineKit(birthDate);
+    const newData = data[kit];
+    // setSelectedData(newData);
+    setTitle(newData.title);
+    setDescription(newData.description);
+    setSuitableFor(newData.suitableFor);
+    setSubscriptionName(newData.subscriptionName);
+    setImages(newData.images);
+  }, [birthDate]);
 
   return (
     <>
@@ -34,6 +45,8 @@ function App() {
           description={description}
           suitableFor={suitableFor}
           subscriptionName={subscriptionName}
+          birthDate={birthDate}
+          setBirthDate={setBirthDate}
         />
         {/* </section> */}
       </div>
