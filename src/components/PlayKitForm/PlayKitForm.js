@@ -1,6 +1,6 @@
 import DatePicker from 'react-datepicker';
-import "react-datepicker/dist/react-datepicker.css";
 import './PlayKitForm.css';
+import "react-datepicker/dist/react-datepicker.css";
 
 const PlayKitForm = ({ childName, setChildName, birthDate, setBirthDate }) => {
 
@@ -13,10 +13,10 @@ const PlayKitForm = ({ childName, setChildName, birthDate, setBirthDate }) => {
   };
 
   return (
-    <div className="container">
+    <div className="form-container">
       <div className="input">
         <p>Your child's name (optional)</p>
-        <input value={childName} onChange={name => handleChildName(name)} />
+        <input value={childName} onChange={name => handleChildName(name)} className="text-input" />
       </div>
       <div className="input">
         <p>Birth date/due date</p>

@@ -23,32 +23,32 @@ function App() {
     setTitle(newData.title);
     setDescription(newData.description);
     setSuitableFor(newData.suitableFor);
-    setSubscriptionName(newData.subscriptionName);
+    setSubscriptionName(newData.subscription);
     setImages(newData.images);
   }, [birthDate]);
 
   return (
     <>
       <Nav />
+      <div className="breadcrumbs">
+        <p>{`Home > Play Kits > ${title} Play Kit`}</p>
+      </div>
       <div className="container">
-        <div className="breadcrumbs">
-          <p>{`Home > Play Kits > ${title} Play Kit`}</p>
-        </div>
-        {/* <section> */}
-        <Carousel
-          images={images}
-        />
-        {/* </section> */}
-        {/* <section> */}
-        <ProductInfo
-          title={title}
-          description={description}
-          suitableFor={suitableFor}
-          subscriptionName={subscriptionName}
-          birthDate={birthDate}
-          setBirthDate={setBirthDate}
-        />
-        {/* </section> */}
+        <section className="images">
+          <Carousel
+            images={images}
+          />
+        </section>
+        <section className="products">
+          <ProductInfo
+            title={title}
+            description={description}
+            suitableFor={suitableFor}
+            subscriptionName={subscriptionName}
+            birthDate={birthDate}
+            setBirthDate={setBirthDate}
+          />
+        </section>
       </div>
     </>
   );

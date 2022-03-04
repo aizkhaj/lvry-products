@@ -6,7 +6,9 @@
 }
 
 .img-view {
-  height: 400px;
+  max-height: 350px;
+  max-width: 100%;
+  height: auto;
 }
 
 .carousel-list {
@@ -36,4 +38,23 @@
   border: none;
   cursor: pointer;
   background: none;
+}
+
+@media all and (max-width: 380px) {
+  .img-container {
+    margin-bottom: 20px;
+  }
+
+  .img-view {
+    max-height: 350px;
+    max-width: 90vw;
+    height: auto;
+  }
+
+  .img-preview {
+    height: auto;
+    width: 60px;
+    object-fit: cover;
+    margin: 4px;
+  }
 }

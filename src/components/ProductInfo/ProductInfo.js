@@ -4,8 +4,8 @@ import './ProductInfo.css';
 
 const ProductInfo = ({ title, description, suitableFor, subscriptionName, childName, setChildName, birthDate, setBirthDate }) => {
   return (
-    <>
-      <h1 className="product-title">{title}</h1>
+    <div className="product-container">
+      <h1 className="product-title">{title} Play Kit</h1>
       <div className="product-meta">
         <ul className="meta-list">
           <li className="item">
@@ -37,7 +37,7 @@ const ProductInfo = ({ title, description, suitableFor, subscriptionName, childN
         <li className="benefits">Cancel anytime</li>
         <li className="benefits">Satisfaction guaranteed</li>
       </ul>
-    </>
+    </div>
   )
 };
 

@@ -3,7 +3,7 @@
   margin: 0 60px;
 }
 
-.navbar {
+nav {
   position: fixed;
   top: 0;
   width: 100%;
@@ -25,8 +25,23 @@
   font-weight: 600;
 }
 
-@media screen and (max-width: 400px) {
+.menu-btn {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 6px;
+}
+
+@media screen and (max-width: 580px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
   .list {
+    display: flex;
     flex-direction: "column";
     height: auto;
   }
@@ -37,5 +52,16 @@
     text-align: center;
     margin-right: 0px;
     padding: 20px 0;
+  }
+
+  .menu-btn {
+    display: block;
+    outline-style: none;
+    border-style: none;
+    background-color: none;
+  }
+
+  .logo-image {
+    margin-top: 20px;
   }
 }
