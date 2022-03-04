@@ -1,3 +1,3 @@
-export default function determineKit(age) {
+export default function determineKit(birthdate) {
   // return appropriate kit based on age
 }
